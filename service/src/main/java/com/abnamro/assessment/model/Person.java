@@ -28,6 +28,8 @@ public class Person {
     @NotNull
     private LocalDate birthDate;
 
+    public Person(){}
+
     public Person(String name, LocalDate birthDate) {
         this.name = name;
         this.birthDate = birthDate;

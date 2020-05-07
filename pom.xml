@@ -17,6 +17,7 @@
     <modules>
         <module>service</module>
         <module>year-generator</module>
+        <module>api</module>
     </modules>
 
 </project>
