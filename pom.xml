@@ -19,6 +19,7 @@
         <module>year-generator</module>
         <module>api</module>
         <module>cmd</module>
+        <module>microservice</module>
     </modules>
 
 </project>
