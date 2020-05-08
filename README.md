@@ -2,16 +2,17 @@
 Introduction
 -
 This assessment consists of **4** assignments.
-Each assignment focuses on different aspects of Java programming, aspects common in corporate environments.
+Each assignment focuses on different aspects of Java programming, aspects common in corporate environments, like testing, exception handling, etc...
 
 > Important: There is no wrong or right. Many different paths lead to success!
 
 Before you start
--
+- Install the [GitPod Extension](https://www.gitpod.io/docs/browser-extension/), if not already installed
+- Login to Github
 - [F1] is the most **important** key in the online IDE (VSCode)!
 - Set the timer before **each** assignment: [F1] > start timer
 - You may **install** additional VSCode extensions from the [marketplace](https://marketplace.visualstudio.com/vscode)
-- Take a 10 min break and coffee between the assignments ;-) 
+- After each assignment, **commit!**, take a 10 min break and some coffee ;-) 
 
 >Some useful hints
 >
@@ -24,15 +25,17 @@ Before you start
 -
 
 
-[Assignment 2 - Create (Springboot) web-application (45 mins)](ASSIGNMENTTWO.md)
+[Assignment 2 - Create (Springboot) web-application (45 mins)](api/README.md)
 -
 
 
-[Assignment 3 - Create a Commandline client (45 mins)](ASSIGNMENTTHREE.md)
+[Assignment 3 - Create a Commandline client (45 mins)](cmd/README.md)
 -
 
 
-[Assignment 4 - Create a Microservice web-application (30 mins)](ASSIGNMENTTFOUR.md)
+[Assignment 4 - Create a Microservice web-application (30 mins)](microservice/README.md)
 -
+
+So, hit the green gitpod button, or clone the repo to get started!   
 
 and one last remark: Did we mention that [F1] is the **most** important key in the online IDE?
