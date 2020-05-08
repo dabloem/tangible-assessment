@@ -1,60 +1,38 @@
-# ABNAMRO Assessment
+# ABNAMRO Assessment (max 4 hours)
 Introduction
 -
-This assessment consists of 4 assignments.
+This assessment consists of **4** assignments.
 Each assignment focuses on different aspects of Java programming, aspects common in corporate environments.
 
 > Important: There is no wrong or right. Many different paths lead to success!
 
-Assignment 1 - Create Service
-=
-The person service obtains persons from the database (h2).
-It provides two services/methods
-* Create Person
-* Get Filtered Persons
-
-Create Person
+Before you start
 -
-ALL Persons require a name with at least 2 characters and a birthdate.
-Duplicate Person names are **not** allowed, throw a BusinessException with a clear and simpel message.  
-When a Person does not meet the requirement, throw an exception with a message indicating the issue(s).
+- [F1] is the most **important** key in the online IDE (VSCode)!
+- Set the timer before **each** assignment: [F1] > start timer
+- You may **install** additional VSCode extensions from the [marketplace](https://marketplace.visualstudio.com/vscode)
+- Take a 10 min break and coffee between the assignments ;-) 
 
-Get Filtered Persons
+>Some useful hints
+>
+>- invoke http requests: curl -v --header "Content-Type: application/json" --request POST --data '{"name":"xyz","birthDate":"xyz"}' http://localhost:8080/
+>- ...
+
+
+
+[Assignment 1 - Create Service (60 mins)](service/README.md)
 -
-Return only Persons which are **not** born in the banned years (see banned-years file).
 
-General remarks
-=
-bla bla...   
-@ALL, this assignment is about the following aspects:
-- implement validation
-- error handling
-- lambda
-- testing
 
-these aspects could be topic of discussion during interview.
-
-Assignment 2 - Create spingboot web application
+[Assignment 2 - Create (Springboot) web-application (45 mins)](ASSIGNMENTTWO.md)
 -
-Use the previous PersonService and create a web restful endpoints.   
-aspects
-- rest api
-- error handling
-- (testing)
 
-Assignment 3 - Create a commandline client to invoke the endpoints
+
+[Assignment 3 - Create a Commandline client (45 mins)](ASSIGNMENTTHREE.md)
 -
-aspects   
-- Choice of framework, (e.g. spring-boot commandline-runner, or any other)
-- reuse code already made in previous assignments
-- use of thirdparty libraries
 
-Assignment 4 - Create another restful web-application
+
+[Assignment 4 - Create a Microservice web-application (30 mins)](ASSIGNMENTTFOUR.md)
 -
-This web application should also invoke the rest endpoints from assignment 2.   
-(If assignment 3 is not accompished, this assignment can still be made)
 
-Microservices aspects   
-- Fault Tolerance
-- Context propogation
-- Docker / Kubernetes ?
+and one last remark: Did we mention that [F1] is the **most** important key in the online IDE?
