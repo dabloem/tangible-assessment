@@ -4,7 +4,8 @@ Assignment ONE
 Create a Service Layer
 =
 
-> Set the timer to 60 minutes. Press F1 (yes, the most important key) and type ' timer' ;-)
+> - Het F1, type 'Open Workspace' and select /service directory
+> - Set the timer to 60 minutes. Press F1 (yes, the most important key) and type ' timer' ;-)
 
 The person *service* obtains persons from the database (h2).
 It provides two services/methods

@@ -12,13 +12,14 @@ Before you start
 - [F1] is the most **important** key in the online IDE (VSCode)!
 - Set the timer before **each** assignment: [F1] > start timer
 - You may **install** additional VSCode extensions from the [marketplace](https://marketplace.visualstudio.com/vscode)
-- After each assignment, **commit!**, take a 10 min break and some coffee ;-) 
+- After each assignment, **commit & push!**, take a 10 min break and some coffee ;-) 
 
 >Some useful hints
->
+>- press F1, type 'Open Workspace' and select the specific folder for each assignment.
 >- invoke http requests: curl -v --header "Content-Type: application/json" --request POST --data '{"name":"xyz","birthDate":"xyz"}' http://localhost:8080/
->- ...
-
+>- on the lefthand-side hit ![source control](fork.png "source control") to manage git
+>- on the righthand-side hit ![github](github.png) to fork and push your code
+>- but also F1, type 'git' and all git commands are to your avail...
 
 
 [Assignment 1 - Create Service (60 mins)](service/README.md)

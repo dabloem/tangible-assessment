@@ -4,8 +4,9 @@ Assignment THREE
 Create Commandline application
 =
 
-> Commit the previous assignment, of not already done.   
-> Set the timer to 45 minutes. F1, you know the drill...
+> - Commit the previous assignment, if not already done.   
+> - Hit F1, type 'Open Workspace' and select /cmd directory
+> - Set the timer to 45 minutes. F1, you know the drill...
 
 Create a commandline application which:
 1. invokes the AddPerson restful endpoint 
