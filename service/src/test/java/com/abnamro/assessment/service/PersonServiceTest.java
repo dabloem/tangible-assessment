@@ -3,6 +3,7 @@ package com.abnamro.assessment.service;
 import com.abnamro.assessment.entity.PersonEntity;
 import com.abnamro.assessment.model.Person;
 import com.abnamro.assessment.repository.PersonRepository;
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -12,11 +13,18 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static org.mockito.Matchers.any;
+import static org.mockito.Matchers.anyString;
 import static org.mockito.Mockito.when;
 
 /**
@@ -31,16 +39,17 @@ public class PersonServiceTest {
     @InjectMocks
     private PersonService personService;
 
-    @BeforeMethod
-    @BeforeClass
-    public void setUp() {
+    @Before
+    public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
         when(personRepository.findAll()).thenReturn(getAllPersonData());
+        populateBannedYears();
     }
 
     @Test
     public void createPerson() throws Exception {
         when(personRepository.save(any(PersonEntity.class))).thenReturn(mockSavedPerson());
+        when(personRepository.isNameExist(anyString())).thenReturn(0);
         personService.createPerson(new Person("Person1", LocalDate.of(1980, 1,1)));
     }
 
@@ -48,6 +57,7 @@ public class PersonServiceTest {
     public void listFilteredPersons() throws Exception {
         List<Person> people = personService.listFilteredPersons();
         Assert.assertNotNull(people);
+        Assert.assertEquals(people.size(),3); //banned years will be excluded
     }
 
     private PersonEntity mockSavedPerson() {
@@ -84,5 +94,13 @@ public class PersonServiceTest {
                 .birthDate(LocalDate.of(2002, 1,1))
                 .build();
         return Arrays.asList(person1, bannedYear1, person3, person4, bannedYear2, bannedYear3);
+    }
+
+    public void populateBannedYears() throws Exception {
+        List<String> bannedYears = new ArrayList<>();
+        try (Stream<String> lines = Files.lines(Paths.get("src/test/resources/banned-years"))) {
+            bannedYears = lines.collect(Collectors.toList());
+        }
+        personService.setBannedYears(bannedYears);
     }
 }

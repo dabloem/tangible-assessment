@@ -9,6 +9,6 @@ import java.util.List;
  */
 
 public interface IPersonService {
-    void createPerson(Person p) ;
+    void createPerson(Person p) throws Exception ;
     List<Person> listFilteredPersons();
 }

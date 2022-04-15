@@ -1,5 +1,7 @@
 package com.abnamro.assessment.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.time.LocalDate;
 
 /**
@@ -8,6 +10,8 @@ import java.time.LocalDate;
 public class Person {
 
     private String name;
+
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate birthDate;
 
     public Person() {}

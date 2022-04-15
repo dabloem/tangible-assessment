@@ -1,0 +1,24 @@
+timer:
+ log.dir: ${abn.log.dir}
+ log.level: DEBUG
+ app.name: Timer
+
+server:
+ servlet.contextPath: /abn
+
+
+management:
+ endpoints:
+  web:
+   base-path: /actuator
+   exposure.include: '*'
+
+spring:
+ mvc.format.date: dd-MM-yyyy
+ application-name: ABN
+ jpa.hibernate.ddl-auto: create
+ jackson:
+  serialization:
+   indent_output: true
+ main:
+  banner-mode: 'off'
